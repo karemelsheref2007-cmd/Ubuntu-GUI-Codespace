@@ -1,1 +1,26 @@
 
+    "name": "Ubuntu 24.04 GUI",
+
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+
+    "forwardPorts": [
+        6080,
+        5901
+    ],
+
+    "portsAttributes": {
+        "6080": {
+            "label": "Ubuntu Desktop",
+            "onAutoForward": "openBrowser",
+            "visibility": "private"
+        },
+        "5901": {
+            "label": "VNC Server",
+            "visibility": "private"
+        }
+    },
+
+    "remoteUser": "vscode"
+}
